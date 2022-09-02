@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #a5a8a8;
+        }
+        .para{
+            font-size: 29px;
+            background: black;
+            color: white;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            cursor: pointer;
+            transition: 1s;
+            border-radius: 16px;
+        }
+        .para:hover{
+            background-color: white;
+            color: #000;
+            transition: .5s;
+        }
+        .box{
+            width: 31%;
+            height: 55%;
+            background: #2f3739;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        div{
+            display: none;
+        }
+        div>h1{
+            margin: 0;
+        }
+
+        div>i{
+            font-size: 85px;
+            color: lime;
+        }
+
+    </style>
+</head>
+<body>
+
+    <button onclick="para()" class="para">Show modal</button>
+    <div>
+        <i class="bi bi-check-circle"></i>
+        <h1>Nice job!</h1>
+        <h3>To dismiss click the button below</h3>
+        <button onclick="box()" class="para">Dismiss</button>
+    </div>
+
+
+
+    <script>
+        let mohamad = document.getElementsByTagName('div');
+        let para1 =  document.getElementsByTagName('button');
+        function para(){
+            mohamad[0].classList.add("box");
+            para1[0].style.opacity = "0";
+        }
+        function box(){
+           mohamad[0].classList.remove("box");
+           para1[0].style.opacity = "1";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        p{
+            color: white;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <input type="password">
+    <p></p>
+    <p></p>
+    <script>
+        let input = document.getElementsByTagName('input')[0];
+        let paragraph = document.getElementsByTagName('p')[1]
+        input.addEventListener('input',function(){
+        let password = input.value;
+        document.getElementsByTagName('p')[0].innerHTML = password;
+        if(password.length < 1){
+            input.style.backgroundColor = "white "   
+            paragraph.innerHTML = ""
+        }
+        if(password.length >= 1){
+            input.style.backgroundColor = "red"
+            paragraph.innerHTML = "bad"
+        }
+        if(password.length >= 4){
+            paragraph.innerHTML = "good"
+            input.style.backgroundColor = "blue"
+        }
+        if(password.length >= 7){
+            paragraph.innerHTML = "Great"
+            input.style.backgroundColor = "green"
+        }
+        if(password.length >= 10){
+            paragraph.innerHTML = " Fantastik"
+            input.style.backgroundColor = "gold"
+        }
+    })
+    </script>
+</body>
+</html>

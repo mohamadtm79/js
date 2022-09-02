@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            background: #232525;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cantainer{
+            width: 38%;
+            height: 441px;
+            background: transparent;
+            color: #fff;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            user-select: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .cantainer>.w{
+            background: black;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            text-transform: uppercase;
+        }
+        .mohamad{
+            background-color: rgb(58 58 58);
+            height: 56%;
+            display: flex;
+            align-items: center;
+        }
+        .lorem{
+            display: none;
+        }
+        figure{
+            margin: 0;
+            width: 50%;
+        }
+        figure>img{
+            width: 100%;
+        }
+        #Pagani , #mclaren{
+            width: 49%;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+    <div class="cantainer">
+        <div class="w" onclick="para()">lamborghini<i class="bi bi-plus"></i></div>
+        <div class="lorem">
+            <figure><img src="img/family_chooser_tecnica.webp" alt="lamborghini"></figure>
+            <figcaption><mark>HURACÁN</mark>
+                TAKE ALL YOUR SOULS TO DRIVE</figcaption>
+            </div>
+
+        <div class="w" onclick="para1()">BUGATTI <i class="bi bi-plus"></i></div>
+        <div class="lorem">
+            <figure><img src="img/se-image-3eff22d2677fcf823cf09a98c3d2be66.webp" alt="BUGATTI"></figure>
+            <figcaption><mark>BUGATTI</mark> W16 MISTRAL: THE ULTIMATE ROADSTER</figcaption>
+        </div>
+        <div class="w" onclick="para2()">pagan <i class="bi bi-plus"></i></div>
+        <div class="lorem">
+            <figure><img src="img/PaganiRadunoIta2021_05626-1980x1320.jpg" alt="Pagani"></figure>
+            <figcaption id="Pagani">processes and technologies. More than partners, I would say they are members of our family, sharing with <mark>Pagani</mark></figcaption>
+        </div>
+        <div class="w" onclick="para3()">mclaren <i class="bi bi-plus"></i></div>
+        <div class="lorem">
+            <figure><img src="img/configurator.png" alt="mclaren"></figure>
+            <figcaption id="mclaren">A natural balance of advanced features and beautiful materials. Create your individual <mark>McLaren</mark> 720S.</figcaption></div>
+    </div>
+    <script>
+        let box1 = document.getElementsByTagName('div')[2].classList
+        let box2 = document.getElementsByTagName('div')[4].classList
+        let box3 = document.getElementsByTagName('div')[6].classList
+        let box4 = document.getElementsByTagName('div')[8].classList
+        function para(){
+            box1.toggle('mohamad');
+            box1.toggle('lorem');
+            box2.remove('mohamad');
+            box2.add('lorem');
+            box3.remove('mohamad');
+            box3.add('lorem');
+            box4.remove('mohamad');
+            box4.add('lorem');
+        }
+        function para1(){
+            box2.toggle('mohamad');
+            box2.toggle('lorem');
+            box1.remove('mohamad');
+            box1.add('lorem');
+            box3.remove('mohamad');
+            box3.add('lorem');
+            box4.remove('mohamad');
+            box4.add('lorem');
+        }
+        function para2(){
+            box3.toggle('mohamad');
+            box3.toggle('lorem');
+            box2.remove('mohamad');
+            box2.add('lorem');
+            box1.remove('mohamad');
+            box1.add('lorem');
+            box4.remove('mohamad');
+            box4.add('lorem');
+        }
+        function para3(){
+            box4.toggle('mohamad');
+            box4.toggle('lorem');
+            box2.remove('mohamad');
+            box2.add('lorem');
+            box3.remove('mohamad');
+            box3.add('lorem');
+            box1.remove('mohamad');
+            box1.add('lorem');
+        }
+
+
+    </script>
+</body>
+</html>

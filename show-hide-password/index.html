@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: black;
+        }
+        div{
+            width: 29%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+        }
+        div>input{
+            width: 90%;
+            border: 0;
+            height: 48px;
+            font-size: 22px;
+            outline: 0;
+        }
+        .i{
+            display: none;
+        }
+        .pass{
+            font-size: 25px;
+            line-height: 2;
+            cursor: pointer;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <input type="text">
+        <i onclick="show()" class="bi bi-eye pass"></i>
+        <i onclick="hide()" class="bi bi-eye-slash i"></i>
+    </div>
+
+
+    <script>
+        function show(){
+            document.getElementsByTagName('i')[0].style.display = 'none'
+            document.getElementsByTagName('i')[1].classList.add('pass')
+            document.getElementsByTagName('input')[0].setAttribute('type','password')
+        }
+        function hide(){
+            document.getElementsByTagName('i')[0].style.display = 'block'
+            document.getElementsByTagName('i')[1].classList.remove('pass')
+            document.getElementsByTagName('input')[0].setAttribute('type','text')
+        }
+
+    </script>
+    
+</body>
+</html>
